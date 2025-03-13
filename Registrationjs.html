@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration <Form></Form></title>
+    <style>
+        body {
+            font-weight: bold;
+            color: rgb(14, 13, 13);
+            text-align: center;
+            background-color: #8e44ad;
+            align-items: center;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+        button {
+            background-color: rgb(15, 15, 15);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <hr>
+    <marquee style="color:rgb(238, 232, 232);" > ENTER YOUR DETAILS </marquee> </label> <br> 
+    <hr>
+    <form onsubmit="return RegForm()">
+        <label>NAME:</label>
+        <input type="text" id="name" placeholder="Enter your Name"><br><br>
+
+        <label>PASSWORD:</label>
+        <input type="password" id="password" placeholder="Password"><br><br>
+
+        <label>PHONE NO:</label>
+        <input type="tel" id="tel" placeholder="Phone No"><br><br>
+
+        <label>EMAIL:</label>
+        <input type="email" id="email" placeholder="Email"><br><br>
+
+        <label>ADDRESS:</label>
+        <input id="address" placeholder="Address"></input><br><br>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+
+    <script>
+        function RegForm() {
+            var name = document.getElementById('name').value;
+            var password = document.getElementById('password').value;
+            var phone_no = document.getElementById('tel').value;
+            var email = document.getElementById('email').value;
+            var address = document.getElementById('address').value;
+
+            if (name === '' || name.length < 3) {
+                alert('Please enter a valid name (minimum 3 characters).');
+                return false;
+            }
+            if (password === '' || password.length < 8) {
+                alert('Password must be at least 8 characters.');
+                return false;
+            }
+            if (phone_no === '' || !/^\d{10}$/.test(phone_no)) {
+                alert('Please enter a valid 10-digit phone number.');
+                return false;
+            }
+            if (email === '') {
+                alert('Please enter an email.');
+                return false;
+            }
+            if (address === '') {
+                alert('Please enter an address.');
+                return false;
+            }
+            alert('Your details have been successfully saved.');
+            return true;
+        }
+    </script>
+</body>
+</html>
