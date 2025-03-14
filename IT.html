@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IT </title>
-</head>
-<body style="background-color:LIGHTBLUE;">
-<center>
-<h2>Information Technology</h2>
-<p>Text Books:
- <select id="book">
-<option >Select the Book</option>
-<option >Automata Theory</option>
-<option >Software Engineering</option>
-<option >Java</option>
-<option >Oracle</option>
-<option >My Sql</option>
-</select>
-</p>
-<label>Quantity : </label> 
-<input type="number"><br>
-<pre>Cost of one book is "500" + shipping "100"</pre>
-<form method=post action='confirm.html' >
-<button>OK </button>
-</form>
-</center>
-</body>
+    <head><meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IT </title>
+        <style>
+    button {
+            background-color: rgb(15, 15, 15);
+            color: white;
+            padding: px;
+            border: none;
+            cursor: pointer;
+        }
+        body{
+            background-color:#447427;
+            text-align: center;
+        }
+</style>
+    </head>
+    <body>
+        <h2>Information Technology</h2>
+        <p>Text Books:
+            <select id="book">
+                <option>Select the Book</option>
+                <option>Automata Theory</option>
+                <option>Software Engineering</option>
+                <option>Java</option>
+                <option>Oracle</option>
+                <option>My Sql</option>
+            </select>
+        </p>
+        <label>Quantity : </label>
+        <input type="number"><br>
+        <pre>Cost of one book is "500" + shipping "100"</pre>
+        <button type="submit"><a href="confirm.html"> OK </a></button>
+    </body>
 </html>
